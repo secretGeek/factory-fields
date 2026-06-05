@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="96" fill="#1a2130"/>
+
+  <!-- Trunk -->
+  <rect x="210" y="294" width="92" height="116" rx="12" fill="#7a4a1a"/>
+
+  <!-- Canopy -->
+  <circle cx="256" cy="186" r="162" fill="#3a8a3a"/>
+
+  <!-- Apples in canopy -->
+  <circle cx="174" cy="158" r="28" fill="#e53935"/>
+  <circle cx="258" cy="106" r="28" fill="#e53935"/>
+  <circle cx="340" cy="162" r="28" fill="#e53935"/>
+
+  <!-- Conveyor belt -->
+  <rect x="36" y="412" width="440" height="52" rx="26" fill="#b8932a"/>
+  <!-- Belt wheels -->
+  <circle cx="64" cy="438" r="30" fill="#8a6418"/>
+  <circle cx="448" cy="438" r="30" fill="#8a6418"/>
+
+  <!-- Apple dropped onto belt -->
+  <circle cx="200" cy="398" r="24" fill="#e53935"/>
+</svg>
