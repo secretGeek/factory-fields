@@ -1,24 +1,95 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background gradient: dark at edges, slightly lighter in center -->
+    <radialGradient id="bgGrad" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#243045"/>
+      <stop offset="100%" stop-color="#0e1520"/>
+    </radialGradient>
+
+    <!-- Canopy: lit from top-left -->
+    <radialGradient id="canopyGrad" cx="38%" cy="30%" r="65%">
+      <stop offset="0%" stop-color="#5ec45e"/>
+      <stop offset="50%" stop-color="#3a8a3a"/>
+      <stop offset="100%" stop-color="#1e5c1e"/>
+    </radialGradient>
+
+    <!-- Canopy shadow overlay (bottom-right darkening) -->
+    <radialGradient id="canopyShadow" cx="70%" cy="75%" r="55%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Apple shading: lit top-left -->
+    <radialGradient id="appleGrad" cx="35%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="45%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#8b0000"/>
+    </radialGradient>
+
+    <!-- Trunk: lit from top-left -->
+    <linearGradient id="trunkGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9a5e22"/>
+      <stop offset="40%" stop-color="#c47a30"/>
+      <stop offset="100%" stop-color="#4a2a08"/>
+    </linearGradient>
+
+    <!-- Belt: steely gray, lit from top -->
+    <linearGradient id="beltGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#9eaab8"/>
+      <stop offset="40%" stop-color="#6a7888"/>
+      <stop offset="100%" stop-color="#33404e"/>
+    </linearGradient>
+
+    <!-- Wheel shading: steely iron -->
+    <radialGradient id="wheelGrad" cx="38%" cy="32%" r="65%">
+      <stop offset="0%" stop-color="#a8b8c8"/>
+      <stop offset="55%" stop-color="#5a6a7a"/>
+      <stop offset="100%" stop-color="#252e38"/>
+    </radialGradient>
+
+    <!-- Dropped apple (same as tree apples) -->
+    <radialGradient id="appleGrad2" cx="35%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="45%" stop-color="#e53935"/>
+      <stop offset="100%" stop-color="#8b0000"/>
+    </radialGradient>
+  </defs>
+
   <!-- Background -->
-  <rect width="512" height="512" rx="96" fill="#1a2130"/>
+  <rect width="512" height="512" rx="96" fill="url(#bgGrad)"/>
 
   <!-- Trunk -->
-  <rect x="210" y="294" width="92" height="116" rx="12" fill="#7a4a1a"/>
+  <rect x="210" y="294" width="92" height="116" rx="12" fill="url(#trunkGrad)"/>
+  <!-- Trunk highlight streak -->
+  <rect x="224" y="304" width="22" height="90" rx="8" fill="#d0dce8" opacity="0.35"/>
 
-  <!-- Canopy -->
-  <circle cx="256" cy="186" r="162" fill="#3a8a3a"/>
+  <!-- Canopy base -->
+  <circle cx="256" cy="186" r="162" fill="url(#canopyGrad)"/>
+  <!-- Canopy shadow overlay -->
+  <circle cx="256" cy="186" r="162" fill="url(#canopyShadow)"/>
+  <!-- Canopy highlight glint (top-left) -->
+  <ellipse cx="196" cy="128" rx="54" ry="38" fill="#ffffff" opacity="0.07"/>
 
   <!-- Apples in canopy -->
-  <circle cx="174" cy="158" r="28" fill="#e53935"/>
-  <circle cx="258" cy="106" r="28" fill="#e53935"/>
-  <circle cx="340" cy="162" r="28" fill="#e53935"/>
+  <!-- Left apple -->
+  <circle cx="174" cy="158" r="28" fill="url(#appleGrad)"/>
+  <circle cx="166" cy="150" r="8" fill="#ffffff" opacity="0.25"/>
+  <!-- Top apple -->
+  <circle cx="258" cy="106" r="28" fill="url(#appleGrad)"/>
+  <circle cx="250" cy="98" r="8" fill="#ffffff" opacity="0.25"/>
+  <!-- Right apple -->
+  <circle cx="340" cy="162" r="28" fill="url(#appleGrad)"/>
+  <circle cx="332" cy="154" r="8" fill="#ffffff" opacity="0.25"/>
 
   <!-- Conveyor belt -->
-  <rect x="36" y="412" width="440" height="52" rx="26" fill="#b8932a"/>
+  <rect x="36" y="412" width="440" height="52" rx="26" fill="url(#beltGrad)"/>
   <!-- Belt wheels -->
-  <circle cx="64" cy="438" r="30" fill="#8a6418"/>
-  <circle cx="448" cy="438" r="30" fill="#8a6418"/>
+  <circle cx="64" cy="438" r="30" fill="url(#wheelGrad)"/>
+  <circle cx="72" cy="430" r="9" fill="#d0dce8" opacity="0.5"/>
+  <circle cx="448" cy="438" r="30" fill="url(#wheelGrad)"/>
+  <circle cx="456" cy="430" r="9" fill="#d0dce8" opacity="0.5"/>
 
   <!-- Apple dropped onto belt -->
-  <circle cx="200" cy="398" r="24" fill="#e53935"/>
+  <circle cx="200" cy="398" r="24" fill="url(#appleGrad2)"/>
+  <circle cx="193" cy="391" r="7" fill="#ffffff" opacity="0.25"/>
 </svg>
